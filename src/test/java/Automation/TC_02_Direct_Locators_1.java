@@ -4,13 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class TC_02_Direct_Locators_1 {
+//import java.util.List;
+//import java.util.concurrent.TimeUnit;
 
-	public static void main(String[] args) throws InterruptedException {
+public class TC_02_Direct_Locators_1 {
+	// ✅ Declare the logger at class level
+	//private static final Logger logger = LoggerFactory.getLogger(TC_02_Direct_Locators_1.class);
+	@Test
+	public void testMethod() throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		/* Direct Locators
@@ -75,6 +83,7 @@ public class TC_02_Direct_Locators_1 {
 				driver.findElement(By.linkText("Apple monitor 24")).click();
 				TimeUnit.SECONDS.sleep(5);
 				System.out.println(driver.getTitle());
+				//logger.info("This is an INFO log");
 				//driver.close();
 				driver.quit();
 
