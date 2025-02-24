@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ivbellamkonda/Selenium.git'
+                git credentialsId: 'github-credentials',
+                git branch: 'main',
+                url: 'https://github.com/ivbellamkonda/Selenium.git'
             }
         }
         
