@@ -11,11 +11,13 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo Building the project...'  // Change 'sh' to 'bat'
+                bat 'mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 bat 'echo Running tests...'  // Change 'sh' to 'bat'
+                bat 'mvn test'
             }
         }
         stage('Deploy') {
